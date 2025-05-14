@@ -13,6 +13,7 @@
 		81DE69432DD5105F00315C5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 81DE693C2DD5105F00315C5A /* Assets.xcassets */; };
 		81DE69482DD5109000315C5A /* Grade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DE69472DD5108D00315C5A /* Grade.swift */; };
 		81DE694A2DD511D400315C5A /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DE69492DD511D200315C5A /* Student.swift */; };
+		81DE694C2DD5132300315C5A /* StudentListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DE694B2DD5131D00315C5A /* StudentListViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -23,6 +24,7 @@
 		81DE693E2DD5105F00315C5A /* SlideUpSheetExampleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SlideUpSheetExampleApp.swift; sourceTree = "<group>"; };
 		81DE69472DD5108D00315C5A /* Grade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grade.swift; sourceTree = "<group>"; };
 		81DE69492DD511D200315C5A /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
+		81DE694B2DD5131D00315C5A /* StudentListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentListViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +87,7 @@
 		81DE69452DD5106800315C5A /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				81DE694B2DD5131D00315C5A /* StudentListViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				81DE694C2DD5132300315C5A /* StudentListViewModel.swift in Sources */,
 				81DE69402DD5105F00315C5A /* StudentListView.swift in Sources */,
 				81DE69412DD5105F00315C5A /* SlideUpSheetExampleApp.swift in Sources */,
 				81DE694A2DD511D400315C5A /* Student.swift in Sources */,

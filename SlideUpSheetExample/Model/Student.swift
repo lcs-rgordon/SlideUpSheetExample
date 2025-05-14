@@ -16,3 +16,11 @@ struct Student: Identifiable {
     let currentGrade: Grade
     
 }
+
+
+// Example students
+let example1 = Student(firstName: "Nikita", lastName: "Zhdanov", currentGrade: .grad)
+let example2 = Student(firstName: "Veda", lastName: "Cunniffe", currentGrade: .eleven)
+let example3 = Student(firstName: "Sadie", lastName: "Mabbott", currentGrade: .ten)
+let example4 = Student(firstName: "Niko", lastName: "Qose", currentGrade: .nine)
+
