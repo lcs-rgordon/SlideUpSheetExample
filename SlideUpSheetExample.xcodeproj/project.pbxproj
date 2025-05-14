@@ -14,6 +14,7 @@
 		81DE69482DD5109000315C5A /* Grade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DE69472DD5108D00315C5A /* Grade.swift */; };
 		81DE694A2DD511D400315C5A /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DE69492DD511D200315C5A /* Student.swift */; };
 		81DE694C2DD5132300315C5A /* StudentListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DE694B2DD5131D00315C5A /* StudentListViewModel.swift */; };
+		81DE694F2DD51BEE00315C5A /* StudentItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 81DE694E2DD51BEE00315C5A /* StudentItemView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		81DE69472DD5108D00315C5A /* Grade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grade.swift; sourceTree = "<group>"; };
 		81DE69492DD511D200315C5A /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		81DE694B2DD5131D00315C5A /* StudentListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentListViewModel.swift; sourceTree = "<group>"; };
+		81DE694E2DD51BEE00315C5A /* StudentItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentItemView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,9 +97,18 @@
 		81DE69462DD5106F00315C5A /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				81DE694D2DD51BA900315C5A /* Helpers */,
 				81DE693D2DD5105F00315C5A /* StudentListView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		81DE694D2DD51BA900315C5A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				81DE694E2DD51BEE00315C5A /* StudentItemView.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -178,6 +189,7 @@
 				81DE69412DD5105F00315C5A /* SlideUpSheetExampleApp.swift in Sources */,
 				81DE694A2DD511D400315C5A /* Student.swift in Sources */,
 				81DE69482DD5109000315C5A /* Grade.swift in Sources */,
+				81DE694F2DD51BEE00315C5A /* StudentItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

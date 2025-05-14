@@ -8,17 +8,24 @@
 import SwiftUI
 
 struct StudentListView: View {
+    
+    // MARK: Stored properties
+    @State private var viewModel = StudentListViewModel()
+    
+    // MARK: Computed properties
+
+    // User interface
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationStack{
+            List(viewModel.studentsSorted) { currentStudent in
+                StudentItemView(studentToShow: currentStudent)
+            }
+            .navigationTitle("Students")
         }
-        .padding()
     }
 }
 
 #Preview {
     StudentListView()
 }
+

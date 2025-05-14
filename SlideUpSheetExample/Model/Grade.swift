@@ -32,7 +32,7 @@ enum Grade: Int, CaseIterable, Identifiable {
         case .eleven:
             return "Grade 11"
         case .grad:
-            return "Grade 12"
+            return "Grad"
         }
     }
 
