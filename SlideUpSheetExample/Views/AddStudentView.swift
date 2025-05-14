@@ -9,7 +9,18 @@ import SwiftUI
 
 struct AddStudentView: View {
     
+    // NOTE: Technique used to set default focus based on this tutorial...
+    //       https://www.hackingwithswift.com/quick-start/swiftui/how-to-make-a-textfield-or-texteditor-have-default-focus
+    enum FocusedField {
+        case firstName
+        case lastName
+        case grade
+    }
+    
     // MARK: Stored properties
+    
+    // Tracks which field has the focus (cursor)
+    @FocusState private var currentlyFocusedField: FocusedField?
     
     // Tracks whether this view is showing in a sheet or not
     @Binding var isShowing: Bool
@@ -31,15 +42,22 @@ struct AddStudentView: View {
                 Form {
                     Section {
                         TextField("First name", text: $firstName)
+                            .focused($currentlyFocusedField, equals: .firstName)
                         TextField("Last name", text: $lastName)
+                            .focused($currentlyFocusedField, equals: .lastName)
                         Picker("Grade", selection: $grade) {
                             Text(Grade.nine.displayName).tag(Grade.nine)
                             Text(Grade.ten.displayName).tag(Grade.ten)
                             Text(Grade.eleven.displayName).tag(Grade.eleven)
                             Text(Grade.grad.displayName).tag(Grade.grad)
                         }
+                        .focused($currentlyFocusedField, equals: .grade)
 
                     }
+                }
+                // Set the default focus when the form appears
+                .onAppear {
+                    currentlyFocusedField = .firstName
                 }
                 // Allows form background color to be customized
                 .background(Color.yellow)
@@ -59,6 +77,9 @@ struct AddStudentView: View {
                     firstName = ""
                     lastName = ""
                     grade = .nine
+                    
+                    // Place focus back on the first field
+                    currentlyFocusedField = .firstName
                 } label: {
                     Text("Add student")
                 }
@@ -81,7 +102,6 @@ struct AddStudentView: View {
                     }
                 }
             }
-
 
         }
     }
