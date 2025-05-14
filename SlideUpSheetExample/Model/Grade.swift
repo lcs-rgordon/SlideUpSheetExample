@@ -19,7 +19,7 @@ enum Grade: Int, CaseIterable, Identifiable {
     
     // For conformance to Identifiable protocol
     var id: Int {
-        return rawValue // e.g.: When .grade9 is selected, returns 9
+        return rawValue // e.g.: When .nine is selected, returns 9
     }
 
     // For use with a picker to show a human-readable name
