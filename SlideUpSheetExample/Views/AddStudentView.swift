@@ -19,6 +19,9 @@ struct AddStudentView: View {
     @State private var lastName: String = ""
     @State private var grade: Grade = .nine
     
+    // Access to view model to be able to add a new student
+    @Environment(StudentListViewModel.self) var viewModel
+    
     // MARK: Computed properties
     
     // The user interface
@@ -43,7 +46,19 @@ struct AddStudentView: View {
                 .scrollContentBackground(.hidden)
                 
                 Button {
-                    // Will add student eventually
+                    // Add new student using view model
+                    viewModel.add(
+                        newStudent: Student(
+                            firstName: firstName,
+                            lastName: lastName,
+                            currentGrade: grade
+                        )
+                    )
+                    
+                    // Reset input fields
+                    firstName = ""
+                    lastName = ""
+                    grade = .nine
                 } label: {
                     Text("Add student")
                 }
@@ -55,6 +70,18 @@ struct AddStudentView: View {
                 Color.yellow
                     .ignoresSafeArea()
             }
+            // Add toolbar to allow form to be dismissed
+            .toolbar {
+                ToolbarItem {
+                    Button {
+                        // Dismiss this sheet
+                        isShowing = false
+                    } label: {
+                        Text("Done")
+                    }
+                }
+            }
+
 
         }
     }
@@ -67,7 +94,10 @@ struct AddStudentView: View {
     Text("View the sheet is connected to")
         .sheet(isPresented: $showingAddStudentSheet) {
             AddStudentView(isShowing: $showingAddStudentSheet)
-                .presentationDetents([.fraction(0.3), .medium])
+                .presentationDetents([.fraction(0.4), .medium])
+                // Insert an instance of the view model into the environment
+                // so Previews window will not crash
+                .environment(StudentListViewModel())
         }
     
 }
