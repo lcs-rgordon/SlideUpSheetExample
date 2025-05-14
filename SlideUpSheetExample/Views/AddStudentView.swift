@@ -65,13 +65,15 @@ struct AddStudentView: View {
                 
                 Button {
                     // Add new student using view model
-                    viewModel.add(
-                        newStudent: Student(
-                            firstName: firstName,
-                            lastName: lastName,
-                            currentGrade: grade
+                    withAnimation {
+                        viewModel.add(
+                            newStudent: Student(
+                                firstName: firstName,
+                                lastName: lastName,
+                                currentGrade: grade
+                            )
                         )
-                    )
+                    }
                     
                     // Reset input fields
                     firstName = ""
