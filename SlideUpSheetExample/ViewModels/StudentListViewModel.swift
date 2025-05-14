@@ -14,7 +14,7 @@ class StudentListViewModel: Observable {
     
     // List of students, stored in the order they were added to the array
     // NOTE: Pre-populated with example students from model
-    var students: [Student] = [example1, example2, example3, example4]
+    var students: [Student] = [example1, example2, example3, example4, example5, example6, example7]
     
     // MARK: Computed properties
 
